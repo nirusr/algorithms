@@ -8,7 +8,7 @@ public class PalindromeCheck {
 
 		int j = s2.length() - 1;
 		for ( int i = 0; i < s1.length(); i++ ) {
-			if ( ! (s1.charAt(i) == s2.charAt(j)) ) {
+			if ( ! (Character.toLowerCase(s1.charAt(i)) == Character.toLowerCase(s2.charAt(j))) ) {
 				//System.out.println(s1.charAt(i) + " ? " + s2.charAt(j));
 				return false;
 				
@@ -24,7 +24,7 @@ public class PalindromeCheck {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println( PalindromeCheck.isPalindrome("A BCDE", "EDCB A") );
+		System.out.println( PalindromeCheck.isPalindrome("A bCDE", "EDCB A") );
 
 	}
 
