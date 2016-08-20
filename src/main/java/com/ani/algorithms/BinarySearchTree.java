@@ -4,7 +4,7 @@ package com.ani.algorithms;
 public class BinarySearchTree {
 	
 	public static Node root;
-	public static int count = 1;
+	public static int nodeCount = 1;
 	public BinarySearchTree() {
 		// TODO Auto-generated constructor stub
 		this.root = null;
@@ -80,11 +80,11 @@ public class BinarySearchTree {
 	        for(int i=0;i<level-1;i++)
 	            System.out.print("|\t");
 	            System.out.println("|-------"+root.data);
-	            count++;
+	            nodeCount++;
 	    }
 	    else {
 	        System.out.println(root.data);
-	        count++;
+	        nodeCount++;
 	    }
 //	    System.out.println("pBT(" + root.left.data + "," + level + 1);
 	    printBinaryTree(root.left, level+1);
@@ -281,7 +281,7 @@ public class BinarySearchTree {
 	
 		System.out.println("\n" + bst.find(22));
 		//System.out.println("\n" + bst.getLeafCount() );
-		System.out.println(count);
+		System.out.println(nodeCount);
 		bst.printNodeValueL(root, 0) ;
 		bst.printNodeValueR(root, 0) ;
 		System.out.println(bst.printNodeCount(root, 0));
